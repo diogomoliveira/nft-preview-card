@@ -1,0 +1,170 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .card {
+        width: 90%;
+        background-color: $Very-dark-blue-card;
+        border-radius: 2rem;
+        padding: 2rem;
+        max-width: 30rem;
+    
+
+        .wrapper {
+            position: relative;
+            cursor: pointer;
+
+            .header {
+                width: 100%;
+                border-radius: 1rem;
+            }
+
+            .overlay {
+                position: absolute;
+                background-color: $Cyan;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 4px;
+                opacity: 0.5;
+                border-radius: 1rem;
+                display: none;
+            }
+
+            .icon {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: none;
+            }
+
+            &:hover {
+                .overlay, .icon {
+                    display: block;
+                }
+            }
+        }
+
+        .title {
+            color: $White;
+            font-size: 25px;
+            margin-top: 1.5rem;
+            cursor: pointer;
+
+            &:hover {
+                color: $Cyan;
+            }
+        }
+
+        .paragraph {
+            font-size: 17px;
+            margin-top: 1.2rem;
+            font-weight: 300;
+            color: $Soft-blue;
+            line-height: 1.7rem;
+        }
+
+        .price-block {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 1.2rem;
+
+            .row {
+                font-size: 15px;
+                display: flex;
+                align-items: center;
+                gap: 0.4rem;
+            }
+
+            .price {
+                font-weight: 600;
+                color: $Cyan;
+            }
+
+            .clock {
+                color: $Soft-blue;
+                font-weight: 400;
+            }
+        }
+
+        .spacer-line {
+            width: 100%;
+            height: 2px;
+            margin-top: 1rem;
+            background-color: $Very-dark-blue-line;
+        }
+
+        .avatar {
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+            margin-top: 1rem;
+            color: $Soft-blue;
+            gap: 1rem;
+            cursor: pointer;
+
+            img {
+                border: 1px solid transparent;
+                border-radius: 50%;
+                width: 2.5rem;
+            }
+
+            span {
+                color: $White;
+            }
+
+            &:hover {
+                img {
+                    border: 1px solid $White;
+                }
+
+                span {
+                    color: $Cyan;
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .container {
+        .card {
+
+            .title {
+                font-size: 1.8rem!important;
+            }
+
+            .paragraph {
+                margin-top: 1.4rem!important;
+                font-size: 1.5rem!important;
+                line-height: 2.1rem!important;
+            }
+
+            .price-block {
+                margin-top: 2rem!important;
+            }
+
+            .price {
+                font-size: 1.3rem!important;
+            }
+
+            .clock {
+                font-size: 1.3rem!important;
+            }
+
+            .spacer-line {
+                margin-top: 2rem!important;
+            }
+
+            .avatar {
+                font-size: 1.4rem!important;
+            }
+        }
+    }
+}
